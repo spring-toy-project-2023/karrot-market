@@ -1,4 +1,6 @@
 package com.karrot.domain.product;
 
-public class ProductController {
+import com.karrot.global.common.BaseController;
+
+public class ProductController extends BaseController {
 }
