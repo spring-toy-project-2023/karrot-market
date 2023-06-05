@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile-db
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: test_db
+    ports:
+      - "5433:5433"
+    volumes:
+      - ./initdb.d:/docker-entrypoint-initdb.d
